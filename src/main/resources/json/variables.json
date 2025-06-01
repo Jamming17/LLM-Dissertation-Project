@@ -1,0 +1,182 @@
+[
+    {
+        "type": "explanation",
+        "text": "A variable is a named storage location in memory that holds a value. This value can change while the program is running. Variables allow us to store, retrieve, and manipulate data.",
+        "code_example": "int number;\nnumber = 10;\nSystem.out.println(number); // Output: 10"
+      },
+      {
+        "type": "explanation",
+        "text": "To declare a variable in Java, we need to specify its data type and name. Initializing a variable means assigning it a value when it is declared.",
+        "code_example": "String name = \"Alice\";\nSystem.out.println(name); // Output: Alice"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student has declared an integer variable.",
+        "code_example": "int myNumber;\nSystem.out.println(myNumber);",
+        "question": "Why does this code produce an error?",
+        "topic": "variable initialization",
+        "hint": "Does Java allow using uninitialized variables?"
+      },
+      {
+        "type": "explanation",
+        "text": "Variable names in Java should be meaningful and follow specific naming conventions: \n1. They must start with a letter, underscore (_), or dollar sign ($).\n2. They cannot be Java keywords (e.g., 'int', 'class').\n3. They should use camelCase (e.g., 'myVariableName').",
+        "code_example": "int myAge = 25;\nString firstName = \"John\";"
+      },
+      {
+        "type": "comprehension",
+        "text": "The following variable names have been written by a student.",
+        "code_example": "int 1stNumber = 10;\nString class = \"Math\";\nint _total = 50;\nString userName = \"Bob\";",
+        "question": "Which variable names are invalid and what rule do they break?",
+        "topic": "variable naming conventions",
+        "hint": "Check the rules for naming variables in Java."
+      },
+      {
+        "type": "generation",
+        "text": "Write a Java statement that declares a variable named 'city' and assigns it the value 'London'.",
+        "partial_code": "/* Code here */",
+        "topic": "declaring and initializing variables",
+        "hint": "Use the String data type and assignment operator."
+      },
+      {
+        "type": "explanation",
+        "text": "In Java, a data type defines the kind of value a variable can store. Java has two main categories of data types: primitive types and non-primitive types.",
+        "code_example": "int age = 20; // Primitive type\nString name = \"Alice\"; // Non-primitive type"
+      },
+      {
+        "type": "explanation",
+        "text": "Primitive data types are the most basic types of data in Java. They include:\n1. int - stores whole numbers (e.g., 5, -100)\n2. double - stores decimal numbers (e.g., 3.14, -2.5)\n3. boolean - stores true or false values\n4. char - stores a single character (e.g., 'A', 'z')",
+        "code_example": "int myNumber = 42;\ndouble temperature = 36.5;\nboolean isJavaFun = true;\nchar grade = 'A';"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student wrote the following Java code.",
+        "code_example": "int a = 10;\ndouble b = 5.5;\nboolean c = false;\nchar d = 'X';\nSystem.out.print(a + \" \"); //print does not create a new line\nSystem.out.print(b + \" \");\nSystem.out.print(c + \" \");\nSystem.out.print(d);",
+        "question": "What will this code print?",
+        "topic": "primitive data types",
+        "hint": "Each variable is printed in sequence on the same line, separated by spaces."
+      },
+      {
+        "type": "explanation",
+        "text": "Non-primitive data types in Java are more complex and can store multiple values or additional functionality. Common examples include:\n- String: stores sequences of characters\n- Arrays: store multiple values of the same type\n- Objects: created from classes and can store multiple attributes",
+        "code_example": "String message = \"Hello, world!\";\nint[] numbers = {1, 2, 3, 4, 5};"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student is trying to store a sentence in a char variable.",
+        "code_example": "char myText = \"Hello\";",
+        "question": "Why does this code produce an error?",
+        "topic": "char vs String",
+        "hint": "char can only store a single character."
+      },
+      {
+        "type": "explanation",
+        "text": "Java allows converting values between different data types. This is called type conversion or casting. \n- Implicit casting: Java automatically converts smaller types to larger types.\n- Explicit casting: Requires manual conversion. Truncates decimal digits.",
+        "code_example": "int num = 10;\ndouble convertedNum = num; // Implicit casting\n\ndouble price = 9.99;\nint roundedPrice = (int) price; // Explicit casting, value is now 5"
+      },
+      {
+        "type": "comprehension",
+        "text": "The following code shows explicit casting.",
+        "code_example": "double num = 5.7;\nint result = (int) num;\nSystem.out.println(result);",
+        "question": "What is the printed value and why?",
+        "topic": "explicit casting",
+        "hint": "Explicit casting removes the decimal part."
+      },
+      {
+        "type": "generation",
+        "text": "Write a Java statement that converts an int variable 'x' to a double variable 'y' using implicit casting.",
+        "partial_code": "int x = 7;\n/* Code here */",
+        "topic": "implicit casting",
+        "hint": "Simply assign the int variable to a double variable."
+      },
+      {
+        "type": "explanation",
+        "text": "In Java, a constant is a variable whose value cannot change once it has been assigned. Constants are declared using the 'final' keyword.",
+        "code_example": "final int MAX_AGE = 100;\nfinal double PI = 3.14159;"
+      },
+      {
+        "type": "explanation",
+        "text": "The key difference between regular variables and constants is that regular variables can be reassigned, while constants (declared with 'final') cannot.",
+        "code_example": "int myNumber = 10;\nmyNumber = 20; // This is allowed\n\nfinal int myConstant = 50;\nmyConstant = 60; // This will cause an error"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student is trying to change the value of a final variable.",
+        "code_example": "final int SPEED_LIMIT = 60;\nSPEED_LIMIT = 80;",
+        "question": "Why does the code produce an error?",
+        "topic": "final keyword",
+        "hint": "A final variable cannot be reassigned after it is initialized."
+      },
+      {
+        "type": "generation",
+        "text": "Declare a final variable named 'TAX_RATE' with a value of 0.2 and print its value.",
+        "partial_code": "/* Code here */\nSystem.out.println(TAX_RATE);",
+        "topic": "declaring constants",
+        "hint": "Use 'final' before the data type."
+      },
+      {
+        "type": "explanation",
+        "text": "Arithmetic operators allow mathematical operations in Java. The basic operators are: + (addition), - (subtraction), * (multiplication), / (division), and % (modulus).",
+        "code_example": "int a = 10, b = 3;\nint sum = a + b; // 13\nint difference = a - b; // 7\nint product = a * b; // 30\nint quotient = a / b; // 3 (integer division)\nint remainder = a % b; // 1 (modulus)"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student wants to calculate the remainder when dividing 25 by 4.",
+        "code_example": "int remainder = 25 % 4;",
+        "question": "What will be the value of 'remainder'?",
+        "topic": "modulus operator",
+        "hint": "The modulus operator (%) returns the remainder of a division."
+      },
+      {
+        "type": "generation",
+        "text": "Write a program that calculates the sum, difference, product, quotient, and remainder when dividing 20 by 7 and prints the results.",
+        "partial_code": "int a = 20, b = 7;\nint sum = /* Code here */;\nint difference = /* Code here */;\nint product = /* Code here */;\nint quotient = /* Code here */;\nint remainder = /* Code here */;\nSystem.out.println(sum + \", \" + difference + \", \" + product + \", \" + quotient + \", \" + remainder);",
+        "topic": "arithmetic operators",
+        "hint": "Use +, -, *, /, and %."
+      },
+      {
+        "type": "explanation",
+        "text": "Operator precedence determines the order of operations. Multiplication (*), division (/), and modulus (%) are evaluated before addition (+) and subtraction (-), unless parentheses change the order.",
+        "code_example": "int result = 10 + 3 * 2; // 10 + 6 = 16\nint resultWithParentheses = (10 + 3) * 2; // 13 * 2 = 26"
+      },
+      {
+        "type": "explanation",
+        "text": "Associativity determines the direction operators are evaluated when they have the same precedence. Arithmetic operators follow left-to-right associativity, except for the assignment (=) operator, which is right-to-left.",
+        "code_example": "int result = 20 / 2 * 5; // 10 * 5 = 50 (left-to-right associativity)"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student wants to calculate the result of the following expression using integer division:",
+        "code_example": "int result = 10 + 6 / 2 - 3;",
+        "question": "What is the final value of 'result'?",
+        "topic": "operator precedence",
+        "hint": "Division happens before addition and subtraction."
+      },
+      {
+        "type": "comprehension",
+        "text": "A student has written the following expression, expecting it to evaluate as (8 + 2) * 5. However, it does not.",
+        "code_example": "int result = 8 + 2 * 5;",
+        "question": "What value does 'result' hold, and how can the student fix it?",
+        "topic": "operator precedence",
+        "hint": "Use parentheses to control precedence."
+      },
+      {
+        "type": "explanation",
+        "text": "The increment (++) and decrement (--) operators increase or decrease a value by 1. They can be used in prefix (++x, --x) or postfix (x++, x--) notation.",
+        "code_example": "int x = 5;\nint y = x++; // y = 5, x = 6 (post-increment)\nint z = ++x; // x = 7, z = 7 (pre-increment)"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student expects the following code to print 6, but it prints 5 instead.",
+        "code_example": "int num = 5;\nSystem.out.println(num++);",
+        "question": "Why does this code print 5 instead of 6?",
+        "topic": "post-increment",
+        "hint": "Does the increment happen before or after printing?"
+      },
+      {
+        "type": "generation",
+        "text": "Write a program that declares an integer variable with a value of 10, then increments it twice using both prefix and postfix notation. Print the final value.",
+        "partial_code": "int num = 10;\n/* Code here */\nSystem.out.println(num);",
+        "topic": "increment operators",
+        "hint": "Use both num++ and ++num."
+      }
+]

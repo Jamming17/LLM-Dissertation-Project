@@ -1,0 +1,122 @@
+[
+	{
+		"type": "explanation",
+		"text": "A function in Java (also called a method) is a reusable block of code that performs a specific task. Functions help keep code organized and avoid repetition. Every function must be defined inside a class in Java.",
+		"code_example": "class Main {\n    static void sayHello() {\n        System.out.println(\"Hello, world!\");\n    }\n\n    public static void main(String[] args) {\n        sayHello(); // Calling the function\n    }\n}"
+	  },
+	  {
+		"type": "explanation",
+		"text": "Functions in Java have a specific structure:\n1. **Return Type**: Specifies if the function returns a value (we will cover this later). 'void' means no return value.\n2. **Function Name**: The name used to call the function.\n3. **Parentheses ()**: Required, even if there are no parameters.\n4. **Function Body**: The block of code inside `{}` that executes when the function is called.",
+		"code_example": "class Main {\n    static void greet() { // Function declaration\n        System.out.println(\"Good morning!\");\n    }\n}"
+	  },
+	  {
+		"type": "explanation",
+		"text": "A function is executed when it is called. You call a function by writing its name followed by parentheses `()`. If the function is inside the same class and marked as `static`, it can be called directly.",
+		"code_example": "class Main {\n    static void greet() {\n        System.out.println(\"Good morning!\");\n    }\n\n    public static void main(String[] args) {\n        greet(); // Function call\n    }\n}"
+	  },
+	  {
+		"type": "comprehension",
+		"text": "A student wrote the following Java code but doesn't know what it will print.",
+		"code_example": "class Test {\n    static void showMessage() {\n        System.out.println(\"Welcome to Java!\");\n    }\n    public static void main(String[] args) {\n        showMessage();\n    }\n}",
+		"question": "What will be printed when this program runs?",
+		"topic": "function calls",
+		"hint": "Look at what the function 'showMessage' does inside its body."
+	  },
+	  {
+		"type": "generation",
+		"text": "Write a Java program with a function named `displayMessage` that prints \"This is a Java function!\" Call this function from `main`.",
+		"partial_code": "class Main {\n    static void displayMessage() {\n        /* Code here */\n    }\n    \n    public static void main(String[] args) {\n        /* Code here */\n    }\n}",
+		"topic": "function definition and calling",
+		"hint": "Define a static function with void return type and call it inside main."
+	  },
+	  {
+		"type": "explanation",
+		"text": "Functions can take input values called parameters. Parameters allow functions to perform tasks with different data. When calling a function, you provide values (called arguments) that are passed into the function’s parameters.",
+		"code_example": "class Main {\n    static void greet(String name) {\n        System.out.println(\"Hello, \" + name + \"!\");\n    }\n\n    public static void main(String[] args) {\n        greet(\"Alice\"); // Passing an argument\n        greet(\"Bob\");\n    }\n}"
+	  },
+	  {
+		"type": "explanation",
+		"text": "You can define multiple parameters by separating them with commas. When calling the function, you must provide arguments in the same order as the parameters.",
+		"code_example": "class Main {\n    static void introduce(String name, int age) {\n        System.out.println(name + \" is \" + age + \" years old.\");\n    }\n\n    public static void main(String[] args) {\n        introduce(\"Charlie\", 25);\n    }\n}"
+	  },
+	  {
+		"type": "comprehension",
+		"text": "A student wrote the following function but is unsure how to call it.",
+		"code_example": "class Test {\n    static void addNumbers(int a, int b) {\n        System.out.println(\"Sum: \" + (a + b));\n    }\n}",
+		"question": "How should this function be called inside main to add 5 and 10?",
+		"topic": "function parameters",
+		"hint": "Functions with parameters require arguments when called."
+	  },
+	  {
+		"type": "generation",
+		"text": "Write a Java function named `multiply` that takes two integer parameters and prints their product. Call this function with the numbers 6 and 7.",
+		"partial_code": "class Main {\n    static void multiply(int a, int b) {\n        /* Code here */\n    }\n\n    public static void main(String[] args) {\n        /* Code here */\n    }\n}",
+		"topic": "function parameters",
+		"hint": "Use * to multiply two numbers and call the function with arguments."
+	  },
+	  {
+		"type": "explanation",
+		"text": "Functions can return values instead of just printing them. The return type replaces `void`. To return a value, use the `return` keyword.",
+		"code_example": "class Main {\n    static int square(int num) {\n        return num * num;\n    }\n\n    public static void main(String[] args) {\n        int result = square(4);\n        System.out.println(\"Square: \" + result);\n    }\n}"
+	  },
+	  {
+		"type": "explanation",
+		"text": "A function can return any data type, including `int`, `double`, `boolean`, and `String`. The return type must match the value being returned.",
+		"code_example": "class Main {\n    static double half(double num) {\n        return num / 2;\n    }\n\n    public static void main(String[] args) {\n        double result = half(10.0);\n        System.out.println(\"Half: \" + result);\n    }\n}"
+	  },
+	  {
+		"type": "comprehension",
+		"text": "A student wrote this function to return the sum of two numbers but it doesn't work.",
+		"code_example": "class Test {\n    static int add(int a, int b) {\n        int sum = a + b;\n    }\n}",
+		"question": "What is missing from the function?",
+		"topic": "returning values",
+		"hint": "A function with a return type must return a value."
+	  },
+	  {
+		"type": "generation",
+		"text": "Write a Java function named `getGreeting` that takes a `String` name as a parameter and returns a greeting message in the format \"Hello, [name]!\". Call the function with \"David\" and print the returned value.",
+		"partial_code": "class Main {\n    static String getGreeting(String name) {\n        /* Code here */\n    }\n\n    public static void main(String[] args) {\n        /* Code here */\n    }\n}",
+		"topic": "returning values",
+		"hint": "Use `return` to send a value back from the function."
+	  },
+	  {
+		"type": "explanation",
+		"text": "Function overloading allows multiple functions to have the same name but different parameter lists. Java determines which function to call based on the number and type of arguments provided.",
+		"code_example": "class Main {\n    static void printInfo(String name) {\n        System.out.println(\"Name: \" + name);\n    }\n    \n    static void printInfo(String name, int age) {\n        System.out.println(\"Name: \" + name + \", Age: \" + age);\n    }\n\n    public static void main(String[] args) {\n        printInfo(\"Alice\");\n        printInfo(\"Bob\", 25);\n    }\n}"
+	  },
+	  {
+		"type": "comprehension",
+		"text": "A student wrote two functions with the same name but is unsure why they work.",
+		"code_example": "class Test {\n    static void display(int num) {\n        System.out.println(\"Integer: \" + num);\n    }\n\n    static void display(double num) {\n        System.out.println(\"Double: \" + num);\n    }\n}",
+		"question": "Why does Java allow these two functions to have the same name?",
+		"topic": "function overloading",
+		"hint": "Java differentiates functions by their parameter types."
+	  },
+	  {
+		"type": "generation",
+		"text": "Write two overloaded functions named `calculateArea`. One should take an `int` (side length) and return the area of a square. The other should take two `double` parameters (length and width) and return the area of a rectangle. Call both functions with example values.",
+		"partial_code": "class Main {\n    static int calculateArea(int side) {\n        /* Code here */\n    }\n    \n    static double calculateArea(double length, double width) {\n        /* Code here */\n    }\n\n    public static void main(String[] args) {\n        /* Code here */\n    }\n}",
+		"topic": "function overloading",
+		"hint": "Define two functions with the same name but different parameters."
+	  },
+	  {
+		"type": "explanation",
+		"text": "Variable scope determines where a variable can be accessed in a program. In Java, variables can be local (inside a method), instance (inside a class but outside methods), or static (shared among all instances of a class).",
+		"code_example": "class Example {\n    int instanceVar = 10; // Instance variable\n    static int staticVar = 20; // Static variable\n\n    void method() {\n        int localVar = 30; // Local variable\n        System.out.println(localVar);\n    }\n}"
+	  },
+	  {
+		"type": "comprehension",
+		"text": "A student is trying to access a variable inside a different method but is getting an error.",
+		"code_example": "class Test {\n    void methodOne() {\n        int num = 5;\n    }\n    \n    void methodTwo() {\n        System.out.println(num); // Error here\n    }\n}",
+		"question": "Why does this code cause an error?",
+		"topic": "local variable scope",
+		"hint": "Local variables are only accessible within the method they are declared in."
+	  },
+	  {
+		"type": "generation",
+		"text": "Modify the following code so that the variable `count` is accessible in both methods. You may change its declaration but keep the structure of the methods.",
+		"partial_code": "class Counter {\n    void increment() {\n        int count = 0;\n        count++;\n    }\n    \n    void display() {\n        System.out.println(count);\n    }\n}",
+		"topic": "variable scope",
+		"hint": "Consider making `count` an instance variable instead of a local variable."
+	  }
+]

@@ -1,0 +1,30 @@
+/**
+ * Copyright (C) University of Southampton - All Rights Reserved
+ *
+ * This source code is protected under international copyright law. All rights
+ * reserved and protected by the copyright holders.
+ * This file is confidential and only available to authorized individuals with the
+ * permission of the copyright holders. If you encounter this file and do not have
+ * permission, please contact the copyright holders and delete this file.
+ */
+.root {
+    -fx-background-color: #f0f0f0;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-hgap: 20px;
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #45A049;
+}
+
+.label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: #333333;
+}

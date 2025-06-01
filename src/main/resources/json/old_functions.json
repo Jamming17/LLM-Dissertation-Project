@@ -1,0 +1,114 @@
+[
+	{
+		"type": "explanation",
+		"text": "A function (also called a method in Java) is a reusable block of code that performs a specific task. Functions help organize code and make it easier to read and maintain. The main() function is always run first.",
+		"code_example": "public class Main {\n\tpublic static void sayHello() {\n\t\tSystem.out.println(\"Hello!\");\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tsayHello();\n\t}\n}"
+	},
+	{
+		"type": "explanation",
+		"text": "Functions allow programmers to write code once and reuse it multiple times. This reduces duplication and makes debugging easier.",
+		"code_example": "public class Main {\n\tpublic static void greet() {\n\t\tSystem.out.println(\"Hello!\");\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tgreet();\n\t\tgreet();\n\t\tgreet();\n\t}\n}"
+	},
+	{
+		"type": "explanation",
+		"text": "A function consists of a name, a return type, parameters (optional), and a body that contains the code to execute.",
+		"code_example": "public static int add(int a, int b) {\n\treturn a + b;\n}\n\npublic static void main(String[] args) {\n\tint result = add(3, 4);\n\tSystem.out.println(result);\n}"
+	},
+	{
+		"type": "explanation",
+		"text": "In Java, a method must be declared inside a class. It has a return type, a name, and optionally parameters.",
+		"code_example": "public class Main {\n\tpublic static void greet(String name) {\n\t\tSystem.out.println(\"Hello, \" + name + \"!\");\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tgreet(\"Alice\");\n\t}\n}"
+	},
+	{
+		"type": "comprehension",
+		"text": "The code below defines a method that adds two numbers and prints the result.",
+		"code_example": "public static void addNumbers(int a, int b) {\n\tSystem.out.println(a + b);\n}\n\npublic static void main(String[] args) {\n\taddNumbers(5, 3);\n}",
+		"question": "What will be the output when this program runs?",
+		"topic": "method parameters",
+		"hint": "What happens when 5 and 3 are added together?"
+	},
+	{
+		"type": "explanation",
+		"text": "A method can return a value instead of printing directly. The return type must be specified in the method signature.",
+		"code_example": "public static int square(int num) {\n\treturn num * num;\n}\n\npublic static void main(String[] args) {\n\tint result = square(4);\n\tSystem.out.println(result);\n}"
+	},
+	{
+		"type": "comprehension",
+		"text": "The below method is supposed to return the sum of two numbers, but there is a mistake.",
+		"code_example": "public static int add(int a, int b) {\n\ta + b;\n}\n\npublic static void main(String[] args) {\n\tSystem.out.println(add(5, 3));\n}",
+		"question": "What is wrong with this method?",
+		"topic": "return statements",
+		"hint": "Every non-void method must return a value explicitly."
+	},
+	{
+		"type": "generation",
+		"text": "Complete the method so it correctly returns the sum of two numbers.",
+		"partial_code": "public static int add(int a, int b) {\n\t/* Code here */\n}\n",
+		"topic": "return statements",
+		"hint": "Use the return keyword to return the sum of a and b."
+	},
+	{
+		"type": "explanation",
+		"text": "Method overloading allows multiple methods to have the same name but different parameters.",
+		"code_example": "public static int multiply(int a, int b) {\n\treturn a * b;\n}\n\npublic static double multiply(double a, double b) {\n\treturn a * b;\n}\n\npublic static void main(String[] args) {\n\tSystem.out.println(multiply(3, 4));\n\tSystem.out.println(multiply(2.5, 3.0));\n}"
+	},
+	{
+		"type": "comprehension",
+		"text": "The below code is supposed to use method overloading, but there is an issue.",
+		"code_example": "public static int calculate(int a, int b) {\n\treturn a + b;\n}\n\npublic static int calculate(int x, int y) {\n\treturn x * y;\n}",
+		"question": "What is wrong with this code?",
+		"topic": "method overloading",
+		"hint": "Overloaded methods must have different parameter lists."
+	},
+	{
+		"type": "generation",
+		"text": "Modify the second calculate method to have a different parameter list so the program compiles correctly.",
+		"partial_code": "public static int calculate(int a, int b) {\n\treturn a + b;\n}\n\npublic static int calculate(/* Change parameters here */) {\n\treturn x * y;\n}",
+		"topic": "method overloading",
+		"hint": "You could change the number of parameters or the data types."
+	},
+	{
+		"type": "explanation",
+		"text": "A method can call another method inside the same class. This is useful for breaking complex tasks into smaller steps.",
+		"code_example": "public static int square(int num) {\n\treturn num * num;\n}\n\npublic static int sumOfSquares(int a, int b) {\n\treturn square(a) + square(b);\n}\n\npublic static void main(String[] args) {\n\tSystem.out.println(sumOfSquares(2, 3));\n}"
+	},
+	{
+		"type": "comprehension",
+		"text": "The following code calls a method within another method.",
+		"code_example": "public static int doubleValue(int x) {\n\treturn x * 2;\n}\n\npublic static int calculate(int a, int b) {\n\treturn doubleValue(a) + doubleValue(b);\n}\n\npublic static void main(String[] args) {\n\tSystem.out.println(calculate(3, 4));\n}",
+		"question": "What will be the output when this program runs?",
+		"topic": "method calls",
+		"hint": "Think about what doubleValue(3) and doubleValue(4) return."
+	},
+	{
+		"type": "explanation",
+		"text": "A method can have a return type of void if it does not return any value.",
+		"code_example": "public static void printMessage() {\n\tSystem.out.println(\"This is a message.\");\n}\n\npublic static void main(String[] args) {\n\tprintMessage();\n}"
+	},
+	{
+		"type": "generation",
+		"text": "Write a method that takes an integer parameter and prints whether it is even or odd.",
+		"partial_code": "public static void checkEvenOdd(int num) {\n\t/* Code here */\n}\n",
+		"topic": "void methods",
+		"hint": "Use the modulus operator (%) to check divisibility by 2."
+	},
+	{
+		"type": "explanation",
+		"text": "Methods can be static or non-static. A static method belongs to the class and can be called without creating an object. A non-static method requires an instance of the class.",
+		"code_example": "public class Main {\n\tpublic void sayHello() {\n\t\tSystem.out.println(\"Hello!\");\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tMain obj = new Main();\n\t\tobj.sayHello();\n\t}\n}"
+	},
+	{
+		"type": "generation",
+		"text": "Write a method that takes an integer parameter and prints whether it is even or odd.",
+		"partial_code": "public static void checkEvenOdd(int num) {\n\t/* Code here */\n}\n",
+		"topic": "void methods",
+		"hint": "Use the modulus operator (%) to check divisibility by 2."
+	},
+	{
+		"type": "generation",
+		"text": "To summarize what you've learned, write a method that takes two numbers as input, adds them together, and returns the sum. The method should then be used in a main method to print the result.",
+		"partial_code": "public class Main {\n\t/* Write your method here */\n\n\tpublic static void main(String[] args) {\n\t\t// Call your method and print the result\n\t}\n}",
+		"topic": "summary exercise",
+		"hint": "Your method should have a return type, parameters, and use the return keyword."
+	}
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "type": "explanation",
+    "text": "In Java, the File class from the java.io package is used to represent file and directory pathnames. It does not create or modify files but allows you to check their properties.",
+    "code_example": "import java.io.File;\n\nFile myFile = new File(\"example.txt\");\nif (myFile.exists()) {\n    System.out.println(\"File exists\");\n} else {\n    System.out.println(\"File does not exist\");\n}"
+  },
+  {
+    "type": "explanation",
+    "text": "To create a new file in Java, you can use the createNewFile() method of the File class. This method returns true if the file is created successfully, and false if it already exists.",
+    "code_example": "import java.io.File;\nimport java.io.IOException;\n\nFile myFile = new File(\"example.txt\");\ntry {\n    if (myFile.createNewFile()) {\n        System.out.println(\"File created successfully\");\n    } else {\n        System.out.println(\"File already exists\");\n    }\n} catch (IOException e) {\n    System.out.println(\"An error occurred.\");\n    e.printStackTrace();\n}"
+  },
+  {
+    "type": "comprehension",
+    "text": "A student wrote the following code to create a new file. However, they are encountering an error.",
+    "code_example": "import java.io.File;\n\nFile myFile = new File(\"example.txt\");\nif (myFile.createNewFile()) {\n    System.out.println(\"File created\");\n}",
+    "question": "What is wrong with this code?",
+    "topic": "Exception handling",
+    "hint": "Check if createNewFile() requires exception handling."
+  },
+  {
+    "type": "explanation",
+    "text": "You can write to a file in Java using the FileWriter class. Always remember to close the writer after use to free up resources.",
+    "code_example": "import java.io.FileWriter;\nimport java.io.IOException;\n\ntry {\n    FileWriter writer = new FileWriter(\"example.txt\");\n    writer.write(\"Hello, world!\");\n    writer.close();\n    System.out.println(\"Successfully wrote to the file.\");\n} catch (IOException e) {\n    System.out.println(\"An error occurred while writing to the file.\");\n}"
+  },
+  {
+    "type": "comprehension",
+    "text": "The following code is supposed to write to a file, but the student is reporting that the data is not being saved.",
+    "code_example": "import java.io.FileWriter;\n\ntry {\n    FileWriter writer = new FileWriter(\"example.txt\");\n    writer.write(\"Hello, world!\");\n} catch (Exception e) {\n    System.out.println(\"An error occurred.\");\n}",
+    "question": "What could be the issue with this code?",
+    "topic": "Closing resources",
+    "hint": "Check whether the writer is properly closed."
+  },
+  {
+    "type": "explanation",
+    "text": "To read from a file in Java, you can use the Scanner class. Make sure to handle exceptions in case the file does not exist.",
+    "code_example": "import java.io.File;\nimport java.io.IOException;\nimport java.util.Scanner;\n\ntry {\n    File myFile = new File(\"example.txt\");\n    Scanner reader = new Scanner(myFile);\n    while (reader.hasNextLine()) {\n        System.out.println(reader.nextLine());\n    }\n    reader.close();\n} catch (IOException e) {\n    System.out.println(\"An error occurred while reading the file.\");\n}"
+  },
+  {
+    "type": "generation",
+    "text": "Complete the following code to open and read from a file using Scanner.",
+    "partial_code": "import java.io.File;\nimport java.util.Scanner;\n\ntry {\n    File myFile = new File(\"data.txt\");\n    Scanner reader = new Scanner(/* Code here */);\n    while (reader.hasNextLine()) {\n        System.out.println(reader.nextLine());\n    }\n    reader.close();\n} catch (Exception e) {\n    System.out.println(\"Error reading file\");\n}",
+    "topic": "Reading files",
+    "hint": "The Scanner must be initialized with the file object."
+  },
+  {
+    "type": "explanation",
+    "text": "You can delete a file using the delete() method of the File class. The method returns true if the file was deleted successfully, and false if the file does not exist.",
+    "code_example": "import java.io.File;\n\nFile myFile = new File(\"example.txt\");\nif (myFile.delete()) {\n    System.out.println(\"File deleted successfully\");\n} else {\n    System.out.println(\"Failed to delete file\");\n}"
+  },
+  {
+    "type": "comprehension",
+    "text": "A student is trying to delete a file, but their code is not working as expected.",
+    "code_example": "import java.io.File;\n\nFile myFile = new File(\"example.txt\");\nmyFile.delete();\nSystem.out.println(\"File deleted.\");",
+    "question": "What might be the issue with this approach?",
+    "topic": "Checking file existence",
+    "hint": "Check if the file exists before attempting to delete it."
+  },
+  {
+    "type": "explanation",
+    "text": "BufferedReader can be used for reading files efficiently, especially when dealing with large files. It reads text from an input stream and buffers characters for efficient reading.",
+    "code_example": "import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\ntry {\n    BufferedReader reader = new BufferedReader(new FileReader(\"example.txt\"));\n    String line;\n    while ((line = reader.readLine()) != null) {\n        System.out.println(line);\n    }\n    reader.close();\n} catch (IOException e) {\n    System.out.println(\"Error reading file\");\n}"
+  },
+  {
+    "type": "generation",
+    "text": "Complete the code below to properly close a BufferedReader after reading from a file.",
+    "partial_code": "import java.io.BufferedReader;\nimport java.io.FileReader;\n\ntry {\n    BufferedReader reader = new BufferedReader(new FileReader(\"example.txt\"));\n    String line;\n    while ((line = reader.readLine()) != null) {\n        System.out.println(line);\n    }\n    /* Code here */\n} catch (Exception e) {\n    System.out.println(\"Error reading file\");\n}",
+    "topic": "Closing resources",
+    "hint": "You should close the BufferedReader after use."
+  }
+]

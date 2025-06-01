@@ -1,0 +1,127 @@
+[
+      {
+        "type": "explanation",
+        "text": "In Java, we can read data from a file using the `File` and `Scanner` classes. The `File` class represents a file in the system, while the `Scanner` class allows us to read its contents. We need to handle possible exceptions, such as `FileNotFoundException`, which occurs if the file does not exist.",
+        "code_example": "import java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class ReadFileExample {\n    public static void main(String[] args) {\n        try {\n            File file = new File(\"example.txt\");\n            Scanner scanner = new Scanner(file);\n            while (scanner.hasNextLine()) {\n                System.out.println(scanner.nextLine());\n            }\n            scanner.close();\n        } catch (FileNotFoundException e) {\n            System.out.println(\"File not found.\");\n        }\n    }\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "A student wrote the following code to read a file but is encountering an error.",
+        "code_example": "import java.io.File;\nimport java.util.Scanner;\n\npublic class ReadFile {\n    public static void main(String[] args) {\n        File file = new File(\"data.txt\");\n        Scanner scanner = new Scanner(file);\n        while (scanner.hasNextLine()) {\n            System.out.println(scanner.nextLine());\n        }\n        scanner.close();\n    }\n}",
+        "question": "What is wrong with this code?",
+        "topic": "handling FileNotFoundException",
+        "hint": "What happens if the file does not exist? How should we handle it?"
+      },
+      {
+        "type": "explanation",
+        "text": "The `FileNotFoundException` is a checked exception, which means Java requires us to handle it. We can do this using a `try-catch` block to prevent crashes if the file is missing.",
+        "code_example": "try {\n    File file = new File(\"data.txt\");\n    Scanner scanner = new Scanner(file);\n    while (scanner.hasNextLine()) {\n        System.out.println(scanner.nextLine());\n    }\n    scanner.close();\n} catch (FileNotFoundException e) {\n    System.out.println(\"Error: File not found!\");\n}"
+      },
+      {
+        "type": "generation",
+        "text": "Write a Java program that reads the contents of a file named `notes.txt` and prints each line to the console. Make sure to handle possible file-related errors.",
+        "partial_code": "import java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReader {\n    public static void main(String[] args) {\n        try {\n            File file = new File(\"notes.txt\");\n            Scanner scanner = /* Complete this line */\n            while (/* Complete this condition */) {\n                System.out.println(/* Complete this statement */);\n            }\n            scanner.close();\n        } catch (FileNotFoundException e) {\n            System.out.println(\"File not found!\");\n        }\n    }\n}",
+        "topic": "reading files",
+        "hint": "Use `new Scanner(file);` and `scanner.hasNextLine()` inside the loop."
+      },
+      {
+        "type": "explanation",
+        "text": "In Java, we can write to a file using `FileWriter` and `BufferedWriter`. The `FileWriter` class allows us to write characters to a file, while `BufferedWriter` provides efficient writing by buffering the output before writing it to the file.",
+        "code_example": "import java.io.FileWriter;\nimport java.io.IOException;\n\npublic class WriteFileExample {\n    public static void main(String[] args) {\n        try {\n            FileWriter writer = new FileWriter(\"output.txt\"); // Overwrites existing content\n            writer.write(\"Hello, world!\\n\");\n            writer.close();\n        } catch (IOException e) {\n            System.out.println(\"An error occurred while writing to the file.\");\n        }\n    }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "By default, `FileWriter` overwrites the file. To append instead of overwriting, we can pass `true` as the second argument to `FileWriter`.",
+        "code_example": "FileWriter writer = new FileWriter(\"output.txt\", true); // Appends to the file"
+      },
+      {
+        "type": "comprehension",
+        "text": "Consider the following code snippet:",
+        "code_example": "FileWriter writer = new FileWriter(\"data.txt\");\nwriter.write(\"New Data\\n\");\nwriter.close();",
+        "question": "If `data.txt` originally contained some text, what will happen after running this program?",
+        "topic": "overwriting vs appending",
+        "hint": "Does `FileWriter` keep the old content by default?"
+      },
+      {
+        "type": "explanation",
+        "text": "`BufferedWriter` provides better performance when writing large amounts of data, as it reduces the number of disk writes.",
+        "code_example": "import java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class BufferedWriteExample {\n    public static void main(String[] args) {\n        try {\n            BufferedWriter writer = new BufferedWriter(new FileWriter(\"output.txt\"));\n            writer.write(\"Buffered writing example\\n\");\n            writer.close();\n        } catch (IOException e) {\n            System.out.println(\"An error occurred while writing to the file.\");\n        }\n    }\n}"
+      },
+      {
+        "type": "explanation",
+        "text": "Since writing to a file involves interacting with the filesystem, Java requires us to handle possible `IOException` errors.",
+        "code_example": "try {\n    FileWriter writer = new FileWriter(\"notes.txt\");\n    writer.write(\"Some text\\n\");\n    writer.close();\n} catch (IOException e) {\n    System.out.println(\"Error: \" + e.getMessage());\n}"
+      },
+      {
+        "type": "generation",
+        "text": "Write a Java program that writes three lines of text to a file named `log.txt`. Ensure that the file is appended to if it already exists.",
+        "partial_code": "import java.io.FileWriter;\nimport java.io.IOException;\nimport java.io.BufferedWriter;\n\npublic class AppendToFile {\n    public static void main(String[] args) {\n        try {\n            FileWriter fileWriter = new FileWriter(\"log.txt\", true);\n            BufferedWriter writer = /* Complete this line */;\n            writer.write(\"First line\\n\");\n            writer.write(\"Second line\\n\");\n            writer.write(\"Third line\\n\");\n            writer.close();\n        } catch (IOException e) {\n            System.out.println(\"Error writing to file.\");\n        }\n    }\n}",
+        "topic": "appending to a file",
+        "hint": "Use `new BufferedWriter(fileWriter)` to improve performance."
+      },
+      {
+        "type": "explanation",
+        "text": "In Java, you can check if a file exists using the `exists()` method from the `File` class. It returns `true` if the file exists and `false` otherwise.",
+        "code_example": "import java.io.File;\n\npublic class FileExistExample {\n    public static void main(String[] args) {\n        File file = new File(\"example.txt\");\n        if (file.exists()) {\n            System.out.println(\"The file exists.\");\n        } else {\n            System.out.println(\"The file does not exist.\");\n        }\n    }\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "The following code checks whether a file named `data.txt` exists.",
+        "code_example": "File file = new File(\"data.txt\");\nif (file.exists()) {\n    System.out.println(\"File found.\");\n} else {\n    System.out.println(\"File not found.\");\n}",
+        "question": "What will the program output if `data.txt` exists?",
+        "topic": "checking file existence",
+        "hint": "If the file exists, it will print 'File found'."
+      },
+      {
+        "type": "explanation",
+        "text": "You can get the file information, such as its size and path, using methods like `length()` for file size and `getAbsolutePath()` for the full path.",
+        "code_example": "File file = new File(\"example.txt\");\nif (file.exists()) {\n    System.out.println(\"File size: \" + file.length() + \" bytes\");\n    System.out.println(\"File path: \" + file.getAbsolutePath());\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "The code below attempts to retrieve file size and path for `file1.txt`.",
+        "code_example": "File file = new File(\"file1.txt\");\nif (file.exists()) {\n    System.out.println(file.length() + \" bytes\");\n    System.out.println(file.getAbsolutePath());\n} else {\n    System.out.println(\"File does not exist.\");\n}",
+        "question": "What will the program output if `file1.txt` does not exist?",
+        "topic": "file information",
+        "hint": "The program will print 'File does not exist'."
+      },
+      {
+        "type": "explanation",
+        "text": "You can also check file permissions such as whether the file is readable, writable, or executable using methods like `canRead()`, `canWrite()`, and `canExecute()`.",
+        "code_example": "File file = new File(\"example.txt\");\nif (file.exists()) {\n    System.out.println(\"Readable: \" + file.canRead());\n    System.out.println(\"Writable: \" + file.canWrite());\n    System.out.println(\"Executable: \" + file.canExecute());\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "The following code checks for file permissions on `test.txt`. What will it print if `test.txt` is readable and writable, but not executable?",
+        "code_example": "File file = new File(\"test.txt\");\nif (file.exists()) {\n    System.out.println(\"Readable: \" + file.canRead());\n    System.out.println(\"Writable: \" + file.canWrite());\n    System.out.println(\"Executable: \" + file.canExecute());\n}",
+        "question": "What will the output be if `test.txt` is readable and writable, but not executable?",
+        "topic": "file permissions",
+        "hint": "The first two permissions should be true, and the third should be false."
+      },
+      {
+        "type": "explanation",
+        "text": "You can create a new file using the `createNewFile()` method from the `File` class. It returns `true` if the file was created successfully and `false` if the file already exists.",
+        "code_example": "File file = new File(\"newfile.txt\");\ntry {\n    if (file.createNewFile()) {\n        System.out.println(\"File created: \" + file.getName());\n    } else {\n        System.out.println(\"File already exists.\");\n}\n} catch (IOException e) {\n    System.out.println(\"An error occurred.\");\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "The following code tries to create `logfile.txt`.",
+        "code_example": "File file = new File(\"logfile.txt\");\ntry {\n    if (file.createNewFile()) {\n        System.out.println(\"File created.\");\n} else {\n        System.out.println(\"File already exists.\");\n}\n} catch (IOException e) {\n    System.out.println(\"An error occurred.\");\n}",
+        "question": "What will be printed if `logfile.txt` already exists?",
+        "topic": "file creation",
+        "hint": "It will print 'File already exists'."
+      },
+      {
+        "type": "explanation",
+        "text": "To delete a file, you can use the `delete()` method from the `File` class. It returns `true` if the file was deleted successfully and `false` if the deletion failed (e.g., file does not exist).",
+        "code_example": "File file = new File(\"oldfile.txt\");\nif (file.delete()) {\n    System.out.println(\"Deleted the file: \" + file.getName());\n} else {\n    System.out.println(\"Failed to delete the file.\");\n}"
+      },
+      {
+        "type": "comprehension",
+        "text": "Consider the following code.",
+        "code_example": "File file = new File(\"oldfile.txt\");\nif (file.delete()) {\n    System.out.println(\"File deleted.\");\n} else {\n    System.out.println(\"File not found.\");\n}",
+        "question": "What will the program output if `oldfile.txt` does not exist?",
+        "topic": "file deletion",
+        "hint": "If the file does not exist, the message 'File not found' will be printed."
+      }
+]

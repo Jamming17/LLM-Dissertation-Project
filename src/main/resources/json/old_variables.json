@@ -1,0 +1,114 @@
+[
+    {
+      "type": "explanation",
+      "text": "In Java, variables store data. Each variable has a type that determines what kind of data it can hold. Some basic types include int (integer numbers), float (decimal numbers), boolean (true/false values), and String (text).",
+      "code_example": "int myNumber = 10;\nfloat myFloat = 3.14;\nboolean isJavaFun = true;\nString myText = \"Hello, Java!\";"
+    },
+    {
+      "type": "explanation",
+      "text": "The int type is used to store whole numbers, positive or negative, without decimals.",
+      "code_example": "int myAge = 25;\nint temperature = -5;"
+    },
+    {
+      "type": "explanation",
+      "text": "The float type stores decimal numbers. However, in Java, you must add an 'f' at the end of the number to specify it is a float.",
+      "code_example": "float price = 9.99f;\nfloat gravity = 9.81f;"
+    },
+    {
+      "type": "explanation",
+      "text": "The boolean type can store only two values: true or false. It is often used in conditions and decision-making.",
+      "code_example": "boolean isRaining = false;\nboolean hasPassed = true;"
+    },
+    {
+      "type": "explanation",
+      "text": "The String type is used to store text. String values must be enclosed in double quotes.",
+      "code_example": "String greeting = \"Hello, world!\";\nString name = \"Alice\";"
+    },
+    {
+      "type": "comprehension",
+      "text": "A student wrote the following code to store a price value, but it has an error.",
+      "code_example": "float price = 12.50;",
+      "question": "What is wrong with this code?",
+      "topic": "float type",
+      "hint": "Java requires a special suffix for float literals."
+    },
+    {
+      "type": "explanation",
+      "text": "Operators in Java allow you to perform operations on variables and values. Common operators include + (addition), - (subtraction), * (multiplication), and / (division).",
+      "code_example": "int sum = 5 + 3;\nint difference = 10 - 4;\nint product = 6 * 2;\nfloat quotient = 10 / 4f;"
+    },
+    {
+      "type": "explanation",
+      "text": "The modulus operator (%) returns the remainder of a division.",
+      "code_example": "int remainder = 10 % 3; // remainder is 1"
+    },
+    {
+      "type": "comprehension",
+      "text": "A student wants to store a boolean value to check if a user is logged in. They wrote the following code.",
+      "code_example": "boolean isLoggedIn = \"true\";",
+      "question": "What is wrong with this code?",
+      "topic": "boolean type",
+      "hint": "Booleans do not use quotation marks like Strings do."
+    },
+    {
+      "type": "generation",
+      "text": "The below code should store the result of multiplying two numbers and then print the result. Complete the code.",
+      "partial_code": "int a = 4;\nint b = 5;\nint result = /* Code here */;\nSystem.out.println(result);",
+      "topic": "multiplication operator",
+      "hint": "Use the * operator to multiply two numbers."
+    },
+    {
+      "type": "explanation",
+      "text": "Comparison operators are used to compare values. The most common ones include:\n- == (equal to)\n- != (not equal to)\n- > (greater than)\n- < (less than)\n- >= (greater than or equal to)\n- <= (less than or equal to)",
+      "code_example": "boolean isEqual = (5 == 5);\nboolean isGreater = (10 > 3);\nboolean isDifferent = (4 != 7);"
+    },
+    {
+      "type": "comprehension",
+      "text": "A student wants to check if the number stored in a variable is greater than 10.",
+      "code_example": "int number = 15;\nboolean result = number <> 10;",
+      "question": "What is wrong with this code?",
+      "topic": "comparison operators",
+      "hint": "Java uses > or < for greater/less than comparisons."
+    },
+    {
+      "type": "generation",
+      "text": "The below code should check if the variable 'score' is equal to 100. Complete the code.",
+      "partial_code": "int score = 100;\nboolean isPerfect = /* Code here */;",
+      "topic": "comparison operators",
+      "hint": "Use the == operator to compare two values."
+    },
+    {
+      "type": "explanation",
+      "text": "You can combine multiple conditions using logical operators:\n- && (AND): Both conditions must be true.\n- || (OR): At least one condition must be true.\n- ! (NOT): Reverses a boolean value.",
+      "code_example": "boolean result1 = (5 > 3) && (10 > 2); // true\nboolean result2 = (5 > 3) || (10 < 2); // true\nboolean result3 = !(5 > 3); // false"
+    },
+    {
+      "type": "generation",
+      "text": "The below code should check if 'age' is both greater than 18 and less than 60. Complete the condition.",
+      "partial_code": "int age = 30;\nboolean isWorkingAge = /* Code here */;",
+      "topic": "logical operators",
+      "hint": "Use the && operator to combine conditions."
+    },
+    {
+      "type": "comprehension",
+      "text": "A student wants to store a decimal value and check if it is greater than 10, but the code has a mistake.",
+      "code_example": "float number = 9.5;\nboolean isLarge = number => 10;",
+      "question": "What is wrong with this code?",
+      "topic": "float type and comparison operators",
+      "hint": "Check the syntax of the comparison operator."
+    },
+    {
+      "type": "generation",
+      "text": "The below code should store a String message indicating whether 'score' is at least 50. Complete the code.",
+      "partial_code": "int score = 75;\nString message;\nif (/* Code here */) {\n\tmessage = \"Passed\";\n} else {\n\tmessage = \"Failed\";\n}",
+      "topic": "comparison operators and conditionals",
+      "hint": "Use the >= operator to check if score is at least 50."
+    },
+    {
+      "type": "generation",
+      "text": "The below code should store whether 'temperature' is within the range of 0 to 30 (inclusive). Complete the condition.",
+      "partial_code": "int temperature = 20;\nboolean isComfortable = /* Code here */;",
+      "topic": "logical operators",
+      "hint": "Use both >= and <= with the && operator to define the range."
+    }
+  ]  

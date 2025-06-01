@@ -1,0 +1,447 @@
+Below is the translated JSON object for a C# programming course on the topic of Variables:
+
+```json
+[
+    {
+        "type": "explanation",
+        "text": "A variable is a named storage location in memory that holds a value. This value can change while the program is running. Variables allow us to store, retrieve, and manipulate data.",
+        "code_example": "int number;\nnumber = 10;\nConsole.WriteLine(number); // Output: 10"
+    },
+    {
+        "type": "explanation",
+        "text": "To declare a variable in C#, we need to specify its data type and name. Initializing a variable means assigning it a value when it is declared.",
+        "code_example": "string name = \"Alice\";\nConsole.WriteLine(name); // Output: Alice"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student has declared an integer variable.",
+        "code_example": "int myNumber;\nConsole.WriteLine(myNumber);",
+        "question": "Why does this code produce an error?",
+        "topic": "variable initialization",
+        "hint": "Does C# allow using uninitialized variables?"
+    },
+    {
+        "type": "explanation",
+        "text": "Variable names in C# should be meaningful and follow specific naming conventions: \n1. They must start with a letter or underscore (_).\n2. They cannot be C# keywords (e.g., 'int', 'class').\n3. They should use camelCase (e.g., 'myVariableName').",
+        "code_example": "int myAge = 25;\nstring firstName = \"John\";"
+    },
+    {
+        "type": "comprehension",
+        "text": "The following variable names have been written by a student.",
+        "code_example": "int 1stNumber = 10;\nstring class = \"Math\";\nint _total = 50;\nstring userName = \"Bob\";",
+        "question": "Which variable names are invalid and what rule do they break?",
+        "topic": "variable naming conventions",
+        "hint": "Check the rules for naming variables in C#."
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# statement that declares a variable named 'city' and assigns it the value 'London'.",
+        "partial_code": "/* Code here */",
+        "topic": "declaring and initializing variables",
+        "hint": "Use the string data type and assignment operator."
+    },
+    {
+        "type": "explanation",
+        "text": "In C#, a data type defines the kind of value a variable can store. C# has two main categories of data types: value types and reference types.",
+        "code_example": "int age = 20; // Value type\nstring name = \"Alice\"; // Reference type"
+    },
+    {
+        "type": "explanation",
+        "text": "Value data types are the most basic types of data in C#. They include:\n1. int - stores whole numbers (e.g., 5, -100)\n2. double - stores decimal numbers (e.g., 3.14, -2.5)\n3. bool - stores true or false values\n4. char - stores a single character (e.g., 'A', 'z')",
+        "code_example": "int myNumber = 42;\ndouble temperature = 36.5;\nbool isCSharpFun = true;\nchar grade = 'A';"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote the following C# code.",
+        "code_example": "int a = 10;\ndouble b = 5.5;\nbool c = false;\nchar d = 'X';\nConsole.Write(a + \" \"); // Write does not create a new line\nConsole.Write(b + \" \");\nConsole.Write(c + \" \");\nConsole.Write(d);",
+        "question": "What will this code print?",
+        "topic": "value data types",
+        "hint": "Each variable is printed in sequence on the same line, separated by spaces."
+    },
+    {
+        "type": "explanation",
+        "text": "Reference data types in C# are more complex and can store multiple values or additional functionality. Common examples include:\n- string: stores sequences of characters\n- Arrays: store multiple values of the same type\n- Objects: created from classes and can store multiple attributes",
+        "code_example": "string message = \"Hello, world!\";\nint[] numbers = {1, 2, 3, 4, 5};"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student is trying to store a sentence in a char variable.",
+        "code_example": "char myText = \"Hello\";",
+        "question": "Why does this code produce an error?",
+        "topic": "char vs string",
+        "hint": "char can only store a single character."
+    },
+    {
+        "type": "explanation",
+        "text": "C# allows converting values between different data types. This is called type conversion or casting. \n- Implicit casting: C# automatically converts smaller types to larger types.\n- Explicit casting: Requires manual conversion. Truncates decimal digits.",
+        "code_example": "int num = 10;\ndouble convertedNum = num; // Implicit casting\n\ndouble price = 9.99;\nint roundedPrice = (int)price; // Explicit casting, value is now 9"
+    },
+    {
+        "type": "comprehension",
+        "text": "The following code shows explicit casting.",
+        "code_example": "double num = 5.7;\nint result = (int)num;\nConsole.WriteLine(result);",
+        "question": "What is the printed value and why?",
+        "topic": "explicit casting",
+        "hint": "Explicit casting removes the decimal part."
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# statement that converts an int variable 'x' to a double variable 'y' using implicit casting.",
+        "partial_code": "int x = 7;\n/* Code here */",
+        "topic": "implicit casting",
+        "hint": "Simply assign the int variable to a double variable."
+    },
+    {
+        "type": "explanation",
+        "text": "In C#, a constant is a variable whose value cannot change once it has been assigned. Constants are declared using the 'const' keyword.",
+        "code_example": "const int MAX_AGE = 100;\nconst double PI = 3.14159;"
+    },
+    {
+        "type": "explanation",
+        "text": "The key difference between regular variables and constants is that regular variables can be reassigned, while constants (declared with 'const') cannot.",
+        "code_example": "int myNumber = 10;\nmyNumber = 20; // This is allowed\n\nconst int myConstant = 50;\n// myConstant = 60; // This will cause an error"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student is trying to change the value of a const variable.",
+        "code_example": "const int SPEED_LIMIT = 60;\n// SPEED_LIMIT = 80; // This will cause an error",
+        "question": "Why does the code produce an error?",
+        "topic": "const keyword",
+        "hint": "A const variable cannot be reassigned after it is initialized."
+    },
+    {
+        "type": "generation",
+        "text": "Declare a const variable named 'TAX_RATE' with a value of 0.2 and print its value.",
+        "partial_code": "/* Code here */\nConsole.WriteLine(TAX_RATE);",
+        "topic": "declaring constants",
+        "hint": "Use 'const' before the data type."
+    },
+    {
+        "type": "explanation",
+        "text": "Arithmetic operators allow mathematical operations in C#. The basic operators are: + (addition), - (subtraction), * (multiplication), / (division), and % (modulus).",
+        "code_example": "int a = 10, b = 3;\nint sum = a + b; // 13\nint difference = a - b; // 7\nint product = a * b; // 30\nint quotient = a / b; // 3 (integer division)\nint remainder = a % b; // 1 (modulus)"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wants to calculate the remainder when dividing 25 by 4.",
+        "code_example": "int remainder = 25 % 4;",
+        "question": "What will be the value of 'remainder'?",
+        "topic": "modulus operator",
+        "hint": "The modulus operator (%) returns the remainder of a division."
+    },
+    {
+        "type": "generation",
+        "text": "Write a program that calculates the sum, difference, product, quotient, and remainder when dividing 20 by 7 and prints the results.",
+        "partial_code": "int a = 20, b = 7;\nint sum = /* Code here */;\nint difference = /* Code here */;\nint product = /* Code here */;\nint quotient = /* Code here */;\nint remainder = /* Code here */;\nConsole.WriteLine(sum + \", \" + difference + \", \" + product + \", \" + quotient + \", \" + remainder);",
+        "topic": "arithmetic operators",
+        "hint": "Use +, -, *, /, and %."
+    },
+    {
+        "type": "explanation",
+        "text": "Operator precedence determines the order of operations. Multiplication (*), division (/), and modulus (%) are evaluated before addition (+) and subtraction (-), unless parentheses change the order.",
+        "code_example": "int result = 10 + 3 * 2; // 10 + 6 = 16\nint resultWithParentheses = (10 + 3) * 2; // 13 * 2 = 26"
+    },
+    {
+        "type": "explanation",
+        "text": "Associativity determines the direction operators are evaluated when they have the same precedence. Arithmetic operators follow left-to-right associativity, except for the assignment (=) operator, which is right-to-left.",
+        "code_example": "int result = 20 / 2 * 5; // 10 * 5 = 50 (left-to-right associativity)"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wants to calculate the result of the following expression using integer division:",
+        "code_example": "int result = 10 + 6 / 2 - 3;",
+        "question": "What is the final value of 'result'?",
+        "topic": "operator precedence",
+        "hint": "Division happens before addition and subtraction."
+    },
+    {
+        "type": "comprehension",
+        "text": "A student has written the following expression, expecting it to evaluate as (8 + 2) * 5. However, it does not.",
+        "code_example": "int result = 8 + 2 * 5;",
+        "question": "What value does 'result' hold, and how can the student fix it?",
+        "topic": "operator precedence",
+        "hint": "Use parentheses to control precedence."
+    },
+    {
+        "type": "explanation",
+        "text": "The increment (++) and decrement (--) operators increase or decrease a value by 1. They can be used in prefix (++x, --x) or postfix (x++, x--) notation.",
+        "code_example": "int x = 5;\nint y = x++; // y = 5, x = 6 (post-increment)\nint z = ++x; // x = 7, z = 7 (pre-increment)"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student expects the following code to print 6, but it prints 5 instead.",
+        "code_example": "int num = 5;\nConsole.WriteLine(num++);",
+        "question": "Why does this code print 5 instead of 6?",
+        "topic": "post-increment",
+        "hint": "Does the increment happen before or after printing?"
+    },
+    {
+        "type": "generation",
+        "text": "Write a program that declares an integer variable with a value of 10, then increments it twice using both prefix and postfix notation. Print the final value.",
+        "partial_code": "int num = 10;\n/* Code here */\nConsole.WriteLine(num);",
+        "topic": "increment operators",
+        "hint": "Use both num++ and ++num."
+    }
+]
+```
+Below is the JSON object you provided, but translated into C# format. All Java code examples have been adjusted to fit the C# programming language:
+
+```json
+[
+    {
+        "type": "explanation",
+        "text": "A method in C# is a reusable block of code that performs a specific task. Methods help keep code organized and avoid repetition. Every method must be defined inside a class in C#.",
+        "code_example": "class Program {\n    static void SayHello() {\n        Console.WriteLine(\"Hello, world!\");\n    }\n\n    public static void Main(string[] args) {\n        SayHello(); // Calling the method\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "Methods in C# have a specific structure:\n1. **Return Type**: Specifies if the method returns a value (we will cover this later). 'void' means no return value.\n2. **Method Name**: The name used to call the method.\n3. **Parentheses ()**: Required, even if there are no parameters.\n4. **Method Body**: The block of code inside `{}` that executes when the method is called.",
+        "code_example": "class Program {\n    static void Greet() { // Method declaration\n        Console.WriteLine(\"Good morning!\");\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "A method is executed when it is called. You call a method by writing its name followed by parentheses `()`. If the method is inside the same class and marked as `static`, it can be called directly.",
+        "code_example": "class Program {\n    static void Greet() {\n        Console.WriteLine(\"Good morning!\");\n    }\n\n    public static void Main(string[] args) {\n        Greet(); // Method call\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote the following C# code but doesn't know what it will print.",
+        "code_example": "class Test {\n    static void ShowMessage() {\n        Console.WriteLine(\"Welcome to C#!\");\n    }\n    public static void Main(string[] args) {\n        ShowMessage();\n    }\n}",
+        "question": "What will be printed when this program runs?",
+        "topic": "method calls",
+        "hint": "Look at what the method 'ShowMessage' does inside its body."
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# program with a method named `DisplayMessage` that prints \"This is a C# method!\" Call this method from `Main`.",
+        "partial_code": "class Program {\n    static void DisplayMessage() {\n        /* Code here */\n    }\n    \n    public static void Main(string[] args) {\n        /* Code here */\n    }\n}",
+        "topic": "method definition and calling",
+        "hint": "Define a static method with void return type and call it inside Main."
+    },
+    {
+        "type": "explanation",
+        "text": "Methods can take input values called parameters. Parameters allow methods to perform tasks with different data. When calling a method, you provide values (called arguments) that are passed into the method’s parameters.",
+        "code_example": "class Program {\n    static void Greet(string name) {\n        Console.WriteLine(\"Hello, \" + name + \"!\");\n    }\n\n    public static void Main(string[] args) {\n        Greet(\"Alice\"); // Passing an argument\n        Greet(\"Bob\");\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "You can define multiple parameters by separating them with commas. When calling the method, you must provide arguments in the same order as the parameters.",
+        "code_example": "class Program {\n    static void Introduce(string name, int age) {\n        Console.WriteLine(name + \" is \" + age + \" years old.\");\n    }\n\n    public static void Main(string[] args) {\n        Introduce(\"Charlie\", 25);\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote the following method but is unsure how to call it.",
+        "code_example": "class Test {\n    static void AddNumbers(int a, int b) {\n        Console.WriteLine(\"Sum: \" + (a + b));\n    }\n}",
+        "question": "How should this method be called inside Main to add 5 and 10?",
+        "topic": "method parameters",
+        "hint": "Methods with parameters require arguments when called."
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# method named `Multiply` that takes two integer parameters and prints their product. Call this method with the numbers 6 and 7.",
+        "partial_code": "class Program {\n    static void Multiply(int a, int b) {\n        /* Code here */\n    }\n\n    public static void Main(string[] args) {\n        /* Code here */\n    }\n}",
+        "topic": "method parameters",
+        "hint": "Use * to multiply two numbers and call the method with arguments."
+    },
+    {
+        "type": "explanation",
+        "text": "Methods can return values instead of just printing them. The return type replaces `void`. To return a value, use the `return` keyword.",
+        "code_example": "class Program {\n    static int Square(int num) {\n        return num * num;\n    }\n\n    public static void Main(string[] args) {\n        int result = Square(4);\n        Console.WriteLine(\"Square: \" + result);\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "A method can return any data type, including `int`, `double`, `bool`, and `string`. The return type must match the value being returned.",
+        "code_example": "class Program {\n    static double Half(double num) {\n        return num / 2;\n    }\n\n    public static void Main(string[] args) {\n        double result = Half(10.0);\n        Console.WriteLine(\"Half: \" + result);\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote this method to return the sum of two numbers but it doesn't work.",
+        "code_example": "class Test {\n    static int Add(int a, int b) {\n        int sum = a + b;\n    }\n}",
+        "question": "What is missing from the method?",
+        "topic": "returning values",
+        "hint": "A method with a return type must return a value."
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# method named `GetGreeting` that takes a `string` name as a parameter and returns a greeting message in the format \"Hello, [name]!\" Call the method with \"David\" and print the returned value.",
+        "partial_code": "class Program {\n    static string GetGreeting(string name) {\n        /* Code here */\n    }\n\n    public static void Main(string[] args) {\n        /* Code here */\n    }\n}",
+        "topic": "returning values",
+        "hint": "Use `return` to send a value back from the method."
+    },
+    {
+        "type": "explanation",
+        "text": "Method overloading allows multiple methods to have the same name but different parameter lists. C# determines which method to call based on the number and type of arguments provided.",
+        "code_example": "class Program {\n    static void PrintInfo(string name) {\n        Console.WriteLine(\"Name: \" + name);\n    }\n    \n    static void PrintInfo(string name, int age) {\n        Console.WriteLine(\"Name: \" + name + \", Age: \" + age);\n    }\n\n    public static void Main(string[] args) {\n        PrintInfo(\"Alice\");\n        PrintInfo(\"Bob\", 25);\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote two methods with the same name but is unsure why they work.",
+        "code_example": "class Test {\n    static void Display(int num) {\n        Console.WriteLine(\"Integer: \" + num);\n    }\n\n    static void Display(double num) {\n        Console.WriteLine(\"Double: \" + num);\n    }\n}",
+        "question": "Why does C# allow these two methods to have the same name?",
+        "topic": "method overloading",
+        "hint": "C# differentiates methods by their parameter types."
+    },
+    {
+        "type": "generation",
+        "text": "Write two overloaded methods named `CalculateArea`. One should take an `int` (side length) and return the area of a square. The other should take two `double` parameters (length and width) and return the area of a rectangle. Call both methods with example values.",
+        "partial_code": "class Program {\n    static int CalculateArea(int side) {\n        /* Code here */\n    }\n    \n    static double CalculateArea(double length, double width) {\n        /* Code here */\n    }\n\n    public static void Main(string[] args) {\n        /* Code here */\n    }\n}",
+        "topic": "method overloading",
+        "hint": "Define two methods with the same name but different parameters."
+    },
+    {
+        "type": "explanation",
+        "text": "Variable scope determines where a variable can be accessed in a program. In C#, variables can be local (inside a method), instance (inside a class but outside methods), or static (shared among all instances of a class).",
+        "code_example": "class Example {\n    int instanceVar = 10; // Instance variable\n    static int staticVar = 20; // Static variable\n\n    void Method() {\n        int localVar = 30; // Local variable\n        Console.WriteLine(localVar);\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student is trying to access a variable inside a different method but is getting an error.",
+        "code_example": "class Test {\n    void MethodOne() {\n        int num = 5;\n    }\n    \n    void MethodTwo() {\n        Console.WriteLine(num); // Error here\n    }\n}",
+        "question": "Why does this code cause an error?",
+        "topic": "local variable scope",
+        "hint": "Local variables are only accessible within the method they are declared in."
+    },
+    {
+        "type": "generation",
+        "text": "Modify the following code so that the variable `count` is accessible in both methods. You may change its declaration but keep the structure of the methods.",
+        "partial_code": "class Counter {\n    void Increment() {\n        int count = 0;\n        count++;\n    }\n    \n    void Display() {\n        Console.WriteLine(count);\n    }\n}",
+        "topic": "variable scope",
+        "hint": "Consider making `count` an instance variable instead of a local variable."
+    }
+]
+```
+
+This revised JSON object retains the original educational content and structure, while adapting all relevant code examples to C#.
+Certainly! Below is the JSON object translated to focus on C# programming language specifics, including the correct handling of file operations in C#.
+
+```json
+[
+    {
+        "type": "explanation",
+        "text": "In C#, we can read data from a file using the `File` and `StreamReader` classes. The `File` class provides various methods to interact with the file system, while the `StreamReader` class allows us to read its contents. We should handle possible exceptions, such as `FileNotFoundException`, which occurs if the file does not exist.",
+        "code_example": "using System;\nusing System.IO;\n\npublic class ReadFileExample\n{\n    public static void Main(string[] args)\n    {\n        try\n        {\n            using (StreamReader reader = new StreamReader(\"example.txt\"))\n            {\n                string line;\n                while ((line = reader.ReadLine()) != null)\n                {\n                    Console.WriteLine(line);\n                }\n            }\n        }\n        catch (FileNotFoundException)\n        {\n            Console.WriteLine(\"File not found.\");\n        }\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "A student wrote the following code to read a file but is encountering an error.",
+        "code_example": "using System;\nusing System.IO;\n\npublic class ReadFile\n{\n    public static void Main(string[] args)\n    {\n        StreamReader reader = new StreamReader(\"data.txt\");\n        string line;\n        while ((line = reader.ReadLine()) != null)\n        {\n            Console.WriteLine(line);\n        }\n        reader.Close();\n    }\n}",
+        "question": "What is wrong with this code?",
+        "topic": "handling FileNotFoundException",
+        "hint": "What happens if the file does not exist? How should we handle it?"
+    },
+    {
+        "type": "explanation",
+        "text": "The `FileNotFoundException` is a type of exception that C# requires us to handle. We can do this using a `try-catch` block to prevent crashes if the file is missing.",
+        "code_example": "try\n{\n    using (StreamReader reader = new StreamReader(\"data.txt\"))\n    {\n        string line;\n        while ((line = reader.ReadLine()) != null)\n        {\n            Console.WriteLine(line);\n        }\n    }\n}\ncatch (FileNotFoundException)\n{\n    Console.WriteLine(\"Error: File not found!\");\n}"
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# program that reads the contents of a file named `notes.txt` and prints each line to the console. Make sure to handle possible file-related errors.",
+        "partial_code": "using System;\nusing System.IO;\n\npublic class FileReader\n{\n    public static void Main(string[] args)\n    {\n        try\n        {\n            using (StreamReader reader = new StreamReader(\"notes.txt\"))\n            {\n                string line;\n                while ((line = reader.ReadLine()) != null)\n                {\n                    Console.WriteLine(line);\n                }\n            }\n        }\n        catch (FileNotFoundException)\n        {\n            Console.WriteLine(\"File not found!\");\n        }\n    }\n}",
+        "topic": "reading files",
+        "hint": "Use `new StreamReader(\"fileName\")` and `reader.ReadLine()` inside the loop."
+    },
+    {
+        "type": "explanation",
+        "text": "In C#, we can write to a file using `StreamWriter`. The `StreamWriter` class allows us to write characters to a file, with optional parameters to overwrite or append to a file.",
+        "code_example": "using System;\nusing System.IO;\n\npublic class WriteFileExample\n{\n    public static void Main(string[] args)\n    {\n        try\n        {\n            using (StreamWriter writer = new StreamWriter(\"output.txt\"))\n            {\n                writer.WriteLine(\"Hello, world!\");\n            }\n        }\n        catch (IOException)\n        {\n            Console.WriteLine(\"An error occurred while writing to the file.\");\n        }\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "By default, `StreamWriter` overwrites the file. To append instead, we can pass `true` as the second argument to `StreamWriter`.",
+        "code_example": "using (StreamWriter writer = new StreamWriter(\"output.txt\", true)) // Appends to the file"
+    },
+    {
+        "type": "comprehension",
+        "text": "Consider the following code snippet:",
+        "code_example": "using (StreamWriter writer = new StreamWriter(\"data.txt\"))\n{\n    writer.WriteLine(\"New Data\");\n}",
+        "question": "If `data.txt` originally contained some text, what will happen after running this program?",
+        "topic": "overwriting vs appending",
+        "hint": "Does `StreamWriter` keep the old content by default?"
+    },
+    {
+        "type": "explanation",
+        "text": "`BufferedStream` can be used with `FileStream` to provide better performance when writing or reading large amounts of data.",
+        "code_example": "using System;\nusing System.IO;\n\npublic class BufferedWriteExample\n{\n    public static void Main(string[] args)\n    {\n        try\n        {\n            using (FileStream fs = new FileStream(\"output.txt\", FileMode.Create))\n            using (BufferedStream bs = new BufferedStream(fs))\n            using (StreamWriter writer = new StreamWriter(bs))\n            {\n                writer.WriteLine(\"Buffered writing example\");\n            }\n        }\n        catch (IOException)\n        {\n            Console.WriteLine(\"An error occurred while writing to the file.\");\n        }\n    }\n}"
+    },
+    {
+        "type": "explanation",
+        "text": "Since writing to a file involves interacting with the filesystem, C# requires us to handle possible `IOException` errors.",
+        "code_example": "try\n{\n    using (StreamWriter writer = new StreamWriter(\"notes.txt\"))\n    {\n        writer.WriteLine(\"Some text\");\n    }\n}\ncatch (IOException e)\n{\n    Console.WriteLine(\"Error: \" + e.Message);\n}"
+    },
+    {
+        "type": "generation",
+        "text": "Write a C# program that writes three lines of text to a file named `log.txt`. Ensure that the file is appended to if it already exists.",
+        "partial_code": "using System;\nusing System.IO;\n\npublic class AppendToFile\n{\n    public static void Main(string[] args)\n    {\n        try\n        {\n            using (StreamWriter writer = new StreamWriter(\"log.txt\", true))\n            {\n                writer.WriteLine(\"First line\");\n                writer.WriteLine(\"Second line\");\n                writer.WriteLine(\"Third line\");\n            }\n        }\n        catch (IOException)\n        {\n            Console.WriteLine(\"Error writing to file.\");\n        }\n    }\n}",
+        "topic": "appending to a file",
+        "hint": "Use `new StreamWriter(fileName, true)` to append text."
+    },
+    {
+        "type": "explanation",
+        "text": "In C#, you can check if a file exists using the `File.Exists()` method. It returns `true` if the file exists and `false` otherwise.",
+        "code_example": "using System;\nusing System.IO;\n\npublic class FileExistExample\n{\n    public static void Main(string[] args)\n    {\n        if (File.Exists(\"example.txt\"))\n        {\n            Console.WriteLine(\"The file exists.\");\n        }\n        else\n        {\n            Console.WriteLine(\"The file does not exist.\");\n        }\n    }\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "The following code checks whether a file named `data.txt` exists.",
+        "code_example": "if (File.Exists(\"data.txt\"))\n{\n    Console.WriteLine(\"File found.\");\n}\nelse\n{\n    Console.WriteLine(\"File not found.\");\n}",
+        "question": "What will the program output if `data.txt` exists?",
+        "topic": "checking file existence",
+        "hint": "If the file exists, it will print 'File found'."
+    },
+    {
+        "type": "explanation",
+        "text": "You can get the file information, such as its size and path, using `FileInfo` for file size and `FullName` for the full path.",
+        "code_example": "FileInfo fileInfo = new FileInfo(\"example.txt\");\nif (fileInfo.Exists)\n{\n    Console.WriteLine(\"File size: \" + fileInfo.Length + \" bytes\");\n    Console.WriteLine(\"File path: \" + fileInfo.FullName);\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "The code below attempts to retrieve file size and path for `file1.txt`.",
+        "code_example": "FileInfo fileInfo = new FileInfo(\"file1.txt\");\nif (fileInfo.Exists)\n{\n    Console.WriteLine(fileInfo.Length + \" bytes\");\n    Console.WriteLine(fileInfo.FullName);\n}\nelse\n{\n    Console.WriteLine(\"File does not exist.\");\n}",
+        "question": "What will the program output if `file1.txt` does not exist?",
+        "topic": "file information",
+        "hint": "The program will print 'File does not exist'."
+    },
+    {
+        "type": "explanation",
+        "text": "You can also check file permissions such as whether the file is readable, writable, using methods from the `FileInfo` and `File` classes.",
+        "code_example": "FileInfo fileInfo = new FileInfo(\"example.txt\");\nif (fileInfo.Exists)\n{\n    Console.WriteLine(\"Readable: \" + fileInfo.IsReadOnly);\n    Console.WriteLine(\"Writable: \" + !fileInfo.IsReadOnly);\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "The following code checks for file permissions on `test.txt`. What will it print if `test.txt` is writable and not read-only?",
+        "code_example": "FileInfo fileInfo = new FileInfo(\"test.txt\");\nif (fileInfo.Exists)\n{\n    Console.WriteLine(\"Readable: \" + !fileInfo.IsReadOnly);\n    Console.WriteLine(\"Writable: \" + !fileInfo.IsReadOnly);\n}",
+        "question": "What will the output be if `test.txt` is writable and not read-only?",
+        "topic": "file permissions",
+        "hint": "Both readable and writable should be true."
+    },
+    {
+        "type": "explanation",
+        "text": "You can create a new file using `File.Create()` method. It creates and returns the `FileStream` object for the new file.",
+        "code_example": "try\n{\n    using (FileStream fs = File.Create(\"newfile.txt\"))\n    {\n        Console.WriteLine(\"File created.\");\n    }\n}\ncatch (IOException e)\n{\n    Console.WriteLine(\"An error occurred.\");\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "The following code tries to create `logfile.txt`.",
+        "code_example": "try\n{\n    using (FileStream fs = File.Create(\"logfile.txt\"))\n    {\n        Console.WriteLine(\"File created.\");\n    }\n}\ncatch (IOException e)\n{\n    Console.WriteLine(\"An error occurred.\");\n}",
+        "question": "What will be printed if `logfile.txt` already exists?",
+        "topic": "file creation",
+        "hint": "You must check for existence before creating to avoid overwriting."
+    },
+    {
+        "type": "explanation",
+        "text": "To delete a file, you can use `File.Delete()` method. It deletes the file if it exists.",
+        "code_example": "if (File.Exists(\"oldfile.txt\"))\n{\n    File.Delete(\"oldfile.txt\");\n    Console.WriteLine(\"Deleted the file.\");\n}\nelse\n{\n    Console.WriteLine(\"File not found.\");\n}"
+    },
+    {
+        "type": "comprehension",
+        "text": "Consider the following code.",
+        "code_example": "if (File.Exists(\"oldfile.txt\"))\n{\n    File.Delete(\"oldfile.txt\");\n    Console.WriteLine(\"File deleted.\");\n}\nelse\n{\n    Console.WriteLine(\"File not found.\");\n}",
+        "question": "What will the program output if `oldfile.txt` does not exist?",
+        "topic": "file deletion",
+        "hint": "If the file does not exist, the message 'File not found' will be printed."
+    }
+]
+```
+
+This C# adaptation retains the instructional goals while reflecting C#'s syntax and approach for file handling, exceptions, and operations.

@@ -1,0 +1,32 @@
+[
+    {
+        "type": "explanation",
+        "text": "explanation 1",
+        "code_example": "System.out.println(\"Hello World\");"
+    },
+    {
+        "type": "explanation",
+        "text": "explanation 2",
+        "code_example": "System.out.println(\"Hello World 2 Electric Boogaloo\");"
+    },
+    {
+        "type": "comprehension",
+        "text": "comprehension 1",
+        "code_example": "System.out.println(\"Hello World 3 Electric Boogalyee\");",
+        "question": "What does this code do?",
+        "hint": "meatballs",
+        "topic": "standard output"
+    },
+    {
+        "type": "generation",
+        "text": "generation 1",
+        "partial_code": "for(int i = 0; i < 10; i++) {\n\t//Insert code here\n}",
+        "hint": "spaghetti",
+        "topic": "standard output with loops"
+    },
+    {
+        "type": "explanation",
+        "text": "explanation 3",
+        "code_example": "System.out.println(\"Hello World 4 Electric Boogafloor\");"
+    }
+]

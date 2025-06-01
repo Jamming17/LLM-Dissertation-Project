@@ -1,0 +1,9 @@
+
+{
+    "type":"explanation",
+    "text":"if statements can be used to perform different actions depending on the outcome of a comparison...",
+    "code_example":"myBool = true;\nif (myBool == true) {\n\tSystem.out.println('True!');\n}"
+}
+
+
+
